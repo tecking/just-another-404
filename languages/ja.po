@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: just-another-404\n"
+"Language: ja\n"
+
+#: 
+msgid "Text color"
+msgstr "文字色"
+
+#: 
+msgid "Background color"
+msgstr "背景色"
+
+#: 
+msgid "Background image"
+msgstr "背景画像"
+
+#: 
+#, fuzzy
+msgid "Page title and description"
+msgstr "ページタイトルと説明文"
+
+#: 
+msgid "Page title"
+msgstr "ページタイトル"
+
+#: 
+msgid "Description"
+msgstr "説明文"
+
+#: 
+msgid "HTTP status code"
+msgstr "HTTP ステータスコード"
+
