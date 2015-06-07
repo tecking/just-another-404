@@ -8,7 +8,7 @@ if ( ! is_user_logged_in() ) {
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?php echo esc_html( get_theme_mod( 'ja4_page_title_setting', 'Just another 404' ) ); ?></title>
+	<title><?php echo esc_html( wptexturize( get_theme_mod( 'ja4_page_title_setting', 'Just another 404' ) ) ); ?></title>
 	<?php wp_head(); ?>
 </head>
 
