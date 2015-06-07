@@ -20,7 +20,6 @@ msgid "Background image"
 msgstr "背景画像"
 
 #: 
-#, fuzzy
 msgid "Page title and description"
 msgstr "ページタイトルと説明文"
 
