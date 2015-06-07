@@ -15,8 +15,8 @@ if ( ! is_user_logged_in() ) {
 <body <?php body_class(); ?>>
 	<div id="main">
 		<div id="content">
-			<h1 id="page-title"><?php echo esc_html( get_theme_mod( 'ja4_page_title_setting', 'Just another 404' ) ); ?></h1>
-			<p id="page-description"><?php echo esc_html( get_theme_mod( 'ja4_page_description_setting', 'There\'s not much here.' ) ); ?></p>
+			<h1 id="page-title"><?php echo esc_html( wptexturize( get_theme_mod( 'ja4_page_title_setting', 'Just another 404' ) ) ); ?></h1>
+			<p id="page-description"><?php echo esc_html( wptexturize( get_theme_mod( 'ja4_page_description_setting', 'There\'s not much here.' ) ) ); ?></p>
 		</div>
 	</div>
 
