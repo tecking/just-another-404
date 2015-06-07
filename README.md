@@ -37,7 +37,7 @@ WordPress 4.2 or later, maybe.
 ## Notice
 
 - Please use At Your Own Risk.
-- If a user logged in, the theme responds HTTP status code 200.
+- If a user is logged in, the theme responds HTTP status code 200.
 
 ## Changelog
 
