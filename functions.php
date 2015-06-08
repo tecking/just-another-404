@@ -179,10 +179,10 @@ function ja4_customize_css() {
  * Customize headers.
  */
 
+add_filter( 'wp_headers', 'ja4_set_headers' );
 function ja4_set_headers( $headers ) {
 
 	unset( $headers['X-Pingback'] );
 	return $headers;
 
 }
-add_filter( 'wp_headers', 'ja4_set_headers' );
