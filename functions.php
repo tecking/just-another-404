@@ -138,8 +138,8 @@ class JA4_Customize {
 					'settings' => 'ja4_http_status_setting',
 					'type'     => 'select',
 					'choices'  => array (
-						'HTTP/1.0 404 Not Found' => '404 Not Found',
-						'HTTP/1.0 403 Forbidden' => '403 Forbidden',
+						'404' => '404 Not Found',
+						'403' => '403 Forbidden',
 					),
 				)
 			)
@@ -184,5 +184,24 @@ function ja4_set_headers( $headers ) {
 
 	unset( $headers['X-Pingback'] );
 	return $headers;
+
+}
+
+
+/*
+ * Modify WP_Query().
+ */
+
+add_action( 'parse_query', 'ja4_parse_query' );
+function ja4_parse_query( $query ) {
+
+    $query->set_404();
+
+}
+
+add_filter( 'posts_request', 'ja4_posts_request' );
+function ja4_posts_request( $input ) {
+
+	return $input = null;
 
 }
