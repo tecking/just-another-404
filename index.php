@@ -1,6 +1,6 @@
 <?php
 if ( ! is_user_logged_in() ) {
-	header( get_theme_mod( 'ja4_http_status_setting', 'HTTP/1.0 404 Not Found' ) );
+	status_header( get_theme_mod( 'ja4_http_status_setting', '404' ) );
 	nocache_headers();
 }
 ?>
