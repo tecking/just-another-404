@@ -41,6 +41,9 @@ WordPress 4.2 or later, maybe.
 
 ## Changelog
 
+* 0.1.1 (2015-06-13)
+ * Update header sending method
+ * Modify WP_Query()
 * 0.1.0 (2015-06-07)
  * Opening to the public
 
