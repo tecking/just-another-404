@@ -18,33 +18,7 @@ function ja4_enqueue_scripts() {
  * Calculate box height.
  */
 
-add_filter( 'wp_head', 'ja4_box_height' );
-function ja4_box_height() {
 
-	if ( is_admin_bar_showing() ) {
-
-		$str = '
-		<style type="text/css">
-		<!--
-		html, body, #main, #content {
-			height: 98%;
-			height: -webkit-calc(100% - 32px);
-			height: calc(100% - 32px);
-		}
-		@media screen and (max-width: 782px) {
-			html, body, #main, #content {
-				height: 96%;
-				height: -webkit-calc(100% - 46px);
-				height: calc(100% - 46px);
-			}		
-		}
-		-->
-		</style>';
-		echo $str;
-		
-	}
-
-}
 
 
 /*
@@ -157,20 +131,52 @@ class JA4_Customize {
  * Activate live CSS.
  */
 
-add_action( 'wp_head', 'ja4_customize_css' );
-function ja4_customize_css() {
+add_action( 'wp_head', array( 'JA4_WP_Head', 'ja4_customize_css' ) );
+add_action( 'wp_head', array( 'JA4_WP_Head', 'ja4_box_height' ) );
+class JA4_WP_Head {
 
-	$str = '
-	<style type="text/css">
-	<!--
-	body {
-		color: ' . get_theme_mod( 'ja4_text_color_setting', '#fff' ) . ';
-		background-color: ' . get_theme_mod( 'ja4_bkgd_color_setting', '#eee' ) . ';
-		background-image: url(' . get_theme_mod( 'ja4_bkgd_image_setting', get_stylesheet_directory_uri() . '/img/cover.jpg' ) . ');
+	public static function ja4_box_height() {
+
+		if ( is_admin_bar_showing() ) {
+
+			$str = '
+			<style type="text/css">
+			<!--
+			html, body, #main, #content {
+				height: 98%;
+				height: -webkit-calc(100% - 32px);
+				height: calc(100% - 32px);
+			}
+			@media screen and (max-width: 782px) {
+				html, body, #main, #content {
+					height: 96%;
+					height: -webkit-calc(100% - 46px);
+					height: calc(100% - 46px);
+				}		
+			}
+			-->
+			</style>';
+			echo $str;
+			
+		}
+
 	}
-	-->
-	</style>';
-	echo $str;
+
+	public static function ja4_customize_css() {
+
+		$str = '
+		<style type="text/css">
+		<!--
+		body {
+			color: ' . get_theme_mod( 'ja4_text_color_setting', '#fff' ) . ';
+			background-color: ' . get_theme_mod( 'ja4_bkgd_color_setting', '#eee' ) . ';
+			background-image: url(' . get_theme_mod( 'ja4_bkgd_image_setting', get_stylesheet_directory_uri() . '/img/cover.jpg' ) . ');
+		}
+		-->
+		</style>';
+		echo $str;
+
+	}
 
 }
 
