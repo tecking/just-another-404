@@ -15,13 +15,6 @@ function ja4_enqueue_scripts() {
 
 
 /*
- * Calculate box height.
- */
-
-
-
-
-/*
  * Configurations for theme customizer.
  */
 
