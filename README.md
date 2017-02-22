@@ -4,7 +4,7 @@
 
 A WordPress theme which responds HTTP status code 404/403 with some messages.
 
-Using WordPress as a web application framework, it often happens unnecessity of themes. Once you activate the theme, visitors have no choice getting HTTP status code 404/403.
+Using WordPress as a web application framework, it often happens unnecessity of themes. Once you activate the theme, visitors have no choice but to get HTTP status code 404/403.
 
 Of course, you'd better activate "Discourage search engines from indexing this site" in general options. 
 
