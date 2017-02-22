@@ -198,9 +198,13 @@ function ja4_parse_query( $query ) {
 
 }
 
-add_filter( 'posts_request', 'ja4_posts_request' );
-function ja4_posts_request( $input ) {
-
-	return $input = null;
+if ( ! is_admin() ) {
+	
+	add_filter( 'posts_request', 'ja4_posts_request' );
+	function ja4_posts_request( $input ) {
+		
+		return $input = null;
+		
+	}
 
 }
